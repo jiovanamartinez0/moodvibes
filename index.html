@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Vibes - Pink Edition</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+    <header>
+        <div class="logo">🌸 MoodVibes</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#suggest">Suggest</a></li>
+                <li><a href="other.html">Other</a></li>
+            </ul>
+        </nav>
+    </header>
+ 
+    <main>
+        <section id="home" class="welcome-section">
+            <h1>Welcome to MoodVibes</h1>
+            <p>Explore different color palettes tailored to how you feel today. Choose a vibe below or submit your own!</p>
+        </section>
+ 
+        <section id="themes" class="cards-section">
+            <h2>Select Your Current Vibe</h2>
+            <p style="margin-bottom: 15px; color: #ff477e; font-weight: bold;">✨ Click on any card below to reveal its mood quote!</p>
+            
+            <div class="card-container">
+                <div class="card calm" onclick="showQuote('Soft Pastel', 'Quiet the mind and the soul will speak. Take a deep breath—you are doing great.')">
+                    <h3>Soft Pastel</h3>
+                    <p>Gentle blush pinks and soft creams to bring calm to your day.</p>
+                </div>
+ 
+                <div class="card energetic" onclick="showQuote('Vibrant Rose', 'Go after your dreams today with wild energy! The world needs your unique spark.')">
+                    <h3>Vibrant Rose</h3>
+                    <p>Bright, electric pinks to boost your energy and creativity.</p>
+                </div>
+ 
+                <div class="card cozy" onclick="showQuote('Warm Magenta', 'Pour a cup of tea, wrap yourself in warmth, and allow yourself to simply relax.')">
+                    <h3>Warm Magenta</h3>
+                    <p>Deep, cozy berry tones perfect for a relaxing aesthetic evening.</p>
+                </div>
+ 
+                <div class="card dreamy" onclick="showQuote('Dreamy Blue', 'Like the sky, you can watch clouds pass without becoming them. Stay peaceful.')">
+                    <h3>Dreamy Blue</h3>
+                    <p>A relaxing sky-blue shade to calm your nerves and clear your mind.</p>
+                </div>
+ 
+                <div class="card sunset" onclick="showQuote('Sunset Gold', 'Sunsets are proof that endings can often be absolutely beautiful.')">
+                    <h3>Sunset Gold</h3>
+                    <p>Warm coral-orange hues inspired by relaxing coastal afternoons.</p>
+                </div>
+ 
+                <div class="card minty" onclick="showQuote('Mint Fresh', 'Clean space, clear head, fresh start. Focus on one small positive step forward.')">
+                    <h3>Mint Fresh</h3>
+                    <p>Light botanical green tones designed to boost your focus.</p>
+                </div>
+            </div>
+        </section>
+ 
+        <section id="suggest" class="form-section">
+            <h2>Suggest a Mood Theme</h2>
+            <form id="mood-form" onsubmit="event.preventDefault(); submitMood();">
+                <div class="form-group">
+                    <label for="mood-name">Mood Name:</label>
+                    <input type="text" id="mood-name" required placeholder="e.g., Cherry Blossom">
+                </div>
+                <div class="form-group">
+                    <label for="color-pick">Primary Color:</label>
+                    <input type="color" id="color-pick" value="#ff79c6">
+                </div>
+                <button type="submit" class="submit-btn">Submit Theme</button>
+            </form>
+ 
+            <p style="text-align: center; font-weight: bold; color: #d11a5b; margin-top: 20px;">
+                Total Themes Submitted: <span id="theme-count">0</span>
+            </p>
+        </section>
+    </main>
+ 
+    <footer>
+        <p>&copy; 2026 MoodVibes Mini App. Built for Final Project Checklist.</p>
+    </footer>
+ 
+    <script>
+        function showQuote(moodName, quoteText) {
+            alert("✨ " + moodName + " Vibes:\n\n" + quoteText);
+        }
+ 
+        function submitMood() {
+            var userMood = document.getElementById("mood-name").value;
+            
+            // Increment submission counter
+            var countElement = document.getElementById("theme-count");
+            var currentCount = parseInt(countElement.innerText);
+            countElement.innerText = currentCount + 1;
+ 
+            var messages = [
+                "“What a beautiful aesthetic! Your creativity knows no bounds.”",
+                "“This vibe brings amazing energy. Make today absolutely count!”",
+                "“Your custom theme is stunning! Keep styling your own wonderful path.”"
+            ];
+            var randomQuote = messages[Math.floor(Math.random() * messages.length)];
+            alert("🎉 Suggested Mood: " + userMood + "\n\n" + randomQuote);
+            document.getElementById("mood-form").reset();
+        }
+    </script>
+</body>
+</html>

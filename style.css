@@ -1,0 +1,224 @@
+!/* Smooth Scrolling & Reset */
+html {
+scroll-behavior: smooth;
+}
+ 
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: Arial, sans-serif;
+}
+ 
+body {
+background-color: #fff0f5; /* Light Lavender Blush */
+color: #4a1525; /* Very dark berry red for readability */
+padding-bottom: 80px;
+}
+ 
+/* HEADER & NAVBAR NAVIGATION */
+header {
+background-color: #ff6b8b; /* Strong pink header background */
+color: white;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 15px 30px;
+position: sticky;
+top: 0;
+z-index: 1000;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+ 
+.logo {
+font-size: 1.5rem;
+font-weight: bold;
+color: white;
+}
+ 
+nav ul {
+display: flex;
+list-style: none;
+gap: 15px;
+}
+ 
+/* Nav Buttons */
+nav ul li a {
+background-color: white;
+color: #ff477e;
+text-decoration: none;
+font-weight: bold;
+padding: 10px 20px;
+border-radius: 25px;
+font-size: 0.95rem;
+transition: all 0.2s ease-in-out;
+box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+display: inline-block;
+border: 2px solid transparent;
+}
+ 
+nav ul li a:hover {
+background-color: #ffedf1;
+color: #d11a5b;
+border-color: #ff477e;
+transform: translateY(-2px);
+}
+ 
+/* MAIN CONTENT CONTAINERS */
+main {
+max-width: 1000px;
+margin: 30px auto;
+padding: 0 20px;
+}
+ 
+section {
+background-color: white;
+margin: 40px 0;
+padding: 30px;
+border-radius: 15px;
+border: 3px solid #ffccd5; /* High-contrast border so sections do not disappear */
+box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+}
+ 
+h1, h2 {
+color: #d11a5b; /* Rich raspberry color */
+margin-bottom: 20px;
+}
+ 
+/* WELCOME BANNER */
+.welcome-section {
+text-align: center;
+background: linear-gradient(135deg, #ff85a2, #ffa0b4);
+color: white;
+border: none;
+padding: 40px 20px;
+}
+ 
+.welcome-section h1 {
+color: white;
+font-size: 2.4rem;
+margin-bottom: 12px;
+text-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+}
+ 
+.welcome-section p {
+font-size: 1.1rem;
+text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+ 
+/* MOOD VIBE CARDS GRID */
+.card-container {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+gap: 20px;
+margin-top: 25px;
+}
+ 
+/* General Card Base */
+.card {
+padding: 25px;
+border-radius: 12px;
+color: white;
+text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+transition: transform 0.2s, box-shadow 0.2s;
+border: 2px solid rgba(255,255,255,0.3);
+cursor: pointer;
+}
+ 
+.card:hover {
+transform: translateY(-5px);
+box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+ 
+.card h3 {
+margin-bottom: 10px;
+font-size: 1.3rem;
+border-bottom: 1px solid rgba(255,255,255,0.4);
+padding-bottom: 5px;
+}
+ 
+/* Diverse Preset Mood Colors */
+.calm { background-color: #ff9ebb; color: #4a1525; }
+.energetic { background-color: #ff3366; }
+.cozy { background-color: #b57cff; }
+.dreamy { background-color: #70a1ff; }
+.sunset { background-color: #ff7f50; }
+.minty { background-color: #2ed573; }
+ 
+/* SUGGEST FORM STYLES */
+.form-group {
+margin-bottom: 20px;
+}
+ 
+label {
+display: block;
+margin-bottom: 8px;
+font-weight: bold;
+color: #d11a5b;
+}
+ 
+input[type="text"] {
+width: 100%;
+padding: 12px;
+border: 2px solid #ffccd5;
+border-radius: 8px;
+outline: none;
+}
+ 
+input[type="color"] {
+width: 70px;
+height: 45px;
+border: 2px solid #ffccd5;
+border-radius: 8px;
+cursor: pointer;
+}
+ 
+.submit-btn {
+background-color: #ff477e;
+color: white;
+border: none;
+padding: 14px 28px;
+border-radius: 8px;
+cursor: pointer;
+font-size: 1.05rem;
+font-weight: bold;
+}
+ 
+/* EXPLANATORY SECTIONS */
+.info-section p {
+margin-bottom: 15px;
+line-height: 1.6;
+}
+ 
+.info-section ul {
+margin-left: 20px;
+margin-bottom: 15px;
+}
+ 
+.info-section li {
+margin-bottom: 5px;
+}
+ 
+/* RESPONSIVE CSS MEDIA QUERY */
+@media (max-width: 600px) {
+header {
+flex-direction: column;
+gap: 15px;
+text-align: center;
+}
+ 
+.welcome-section h1 {
+font-size: 1.8rem;
+}
+}
+ 
+/* Footer */
+footer {
+text-align: center;
+padding: 30px;
+color: #ff6b8b;
+font-weight: bold;
+}
+tiene menú contextual
+

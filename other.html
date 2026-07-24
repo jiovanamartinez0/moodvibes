@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoodVibes - Technical Documentation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+    <header>
+        <div class="logo">
+            <img src="https://cdn-icons-png.flaticon.com/512/3406/3406828.png" alt="MoodVibes Flower Logo Icon" class="logo-img" width="32" height="32">
+            <span>MoodVibes</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#quiz">Quiz</a></li>
+            
+                <li><a href="index.html#suggest">Suggest</a></li>
+                <li><a href="other.html">Other</a></li>
+            </ul>
+        </nav>
+    </header>
+ 
+    <main>
+        <section class="info-section">
+            <h2>Back-End Explanation</h2>
+            <p>To make this web application dynamic and functional in a production environment, we would connect it to a back-end server (using technologies like Node.js, Express, or Python Flask) and a database (like MongoDB or PostgreSQL).</p>
+            
+            <h3>The Data Lifecycle:</h3>
+            <ul>
+                <li>When a user submits a custom mood theme using our form, the client-side JavaScript serializes the form values into a JSON object.</li>
+                <li>The client issues a POST request to our API endpoint (e.g., <code>/api/moods</code>).</li>
+                <li>Our back-end server receives the request, parses the JSON, and saves the new mood name and color code into our database collection.</li>
+                <li>When a user loads the website, a GET request retrieves all saved entries from the database and renders them instantly.</li>
+            </ul>
+        </section>
+ 
+        <section class="info-section">
+            <h2>Security &amp; Version Control Section</h2>
+            
+            <h3>Security Considerations:</h3>
+            <ul>
+                <li><strong>Cross-Site Scripting (XSS) Prevention:</strong> When users submit raw text into form inputs, it is essential to sanitize the inputs on both the front-end and the back-end to prevent malicious users from injecting hostile JavaScript scripts into our HTML document.</li>
+                <li><strong>Data Validation:</strong> Colors should be strictly checked to ensure they match valid HEX color standards, and input text lengths must be restricted to keep our layouts clean.</li>
+            </ul>
+ 
+            <h3 style="margin-top: 20px;">Version Control Strategy:</h3>
+            <p>This application's repository is maintained using <strong>Git</strong>. Best practices applied include initializing our project folder locally, creating feature-specific branches (such as <code>feature/mood-quotes</code>), staging files, writing clear and concise commit messages, and pushing our codebase to a remote hosting repository like <strong>GitHub</strong> for collaboration and backup.</p>
+        </section>
+    </main>
+ 
+    <footer>
+        <p>&copy; 2026 MoodVibes Mini App. Built for Final Project Checklist.</p>
+    </footer>
+ 
+</body>
+</html>
